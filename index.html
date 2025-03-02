@@ -36,9 +36,9 @@
             <div class="flex items-center justify-center gap-8">
                 <div class="flex items-center gap-4 rounded-[32px] bg-[rgb(244,247,255)] p-4">
                     <img src="./assets/checkbox.png">
-                    <p class="text-[rgb(30,30,30)] font-bold text-3xl">23</p>
+                    <p id="nav-number" class="text-[rgb(30,30,30)] font-bold text-3xl">23</p>
                 </div>
-                <div class="bg-[rgb(244,247,255)] p-4 rounded-full">
+                <div id="change-theme-box" class="bg-[rgb(244,247,255)] p-4 rounded-full cursor-pointer">
                     <img src="./assets/theme-btn.png" alt="">
                 </div>
             </div>
@@ -57,17 +57,18 @@
                         <div class="bg-white rounded-full p-4"><img src="./assets/checkbox.png" alt=""></div>
                         <div>
                             <p class="text-[rgb(0,48,60)]">Task Assigned</p>
-                            <p class="font-bold text-3xl text-[rgb(0,48,60)]">05</p>
+                            <p id="task-number" class="font-bold text-3xl text-[rgb(0,48,60)]">06</p>
                         </div>
                     </div>
-                    <div class="flex rounded-xl pl-10 pt-5 pb-5 pr-12 items-center"
+                    <div id="discover" class="flex rounded-xl pl-10 pt-5 pb-5 pr-12 items-center"
                         style="background: linear-gradient(130.70deg, rgb(55, 82, 253) 0.419%, rgb(108, 127, 250) 52.66%, rgb(155, 168, 248) 99.733%);">
                         <img src="./assets/board.png" alt="">
-                        <p class="text-white text-2xl font-medium">Discover Something New Today!</p>
+                        <p class="cursor-pointer text-white text-2xl font-medium">Discover Something New
+                            Today!</p>
                     </div>
                     <div class="flex gap-5 p-5 items-center rounded-xl bg-[rgb(244,247,255)]">
                         <div class="bg-white rounded-full p-4"><img src="./assets/calender.png" alt=""></div>
-                        <p class=" text-xl font-medium text-[rgb(0,48,60)]">Wed , <br>
+                        <p id="date" class=" text-xl font-medium text-[rgb(0,48,60)]">Wed , <br>
                             <span class="font-bold">Jul 28 2025</span>
                         </p>
                     </div>
@@ -95,8 +96,9 @@
                             <p class="text-[rgb(0,48,60)]">Deadline</p>
                             <time class="text-[rgb(0,48,60)] font-medium" datetime="2025-03-02">March 2, 2025</time>
                         </div>
-                        <div><button
-                                class="btn btn-primary border-none rounded-lg bg-[rgb(55,82,253)]">Completed</button>
+                        <div class="">
+                            <button
+                                class="completed-btn btn btn-primary border-none rounded-lg bg-[rgb(55,82,253)]">Completed</button>
                         </div>
                     </div>
                 </div>
@@ -116,8 +118,9 @@
                             <p class="text-[rgb(0,48,60)]">Deadline</p>
                             <time class="text-[rgb(0,48,60)] font-medium" datetime="2025-03-02">March 2, 2025</time>
                         </div>
-                        <div><button
-                                class="btn btn-primary border-none rounded-lg bg-[rgb(55,82,253)]">Completed</button>
+                        <div class="">
+                            <button
+                                class="completed-btn btn btn-primary border-none rounded-lg bg-[rgb(55,82,253)]">Completed</button>
                         </div>
                     </div>
                 </div>
@@ -138,8 +141,8 @@
                             <p class="text-[rgb(0,48,60)]">Deadline</p>
                             <time class="text-[rgb(0,48,60)] font-medium" datetime="2025-03-02">March 2, 2025</time>
                         </div>
-                        <div><button
-                                class="btn btn-primary border-none rounded-lg bg-[rgb(55,82,253)]">Completed</button>
+                        <div class=""><button
+                                class="completed-btn btn btn-primary border-none rounded-lg bg-[rgb(55,82,253)]">Completed</button>
                         </div>
                     </div>
                 </div>
@@ -162,8 +165,8 @@
                             <p class="text-[rgb(0,48,60)]">Deadline</p>
                             <time class="text-[rgb(0,48,60)] font-medium" datetime="2025-03-02">March 2, 2025</time>
                         </div>
-                        <div><button
-                                class="btn btn-primary border-none rounded-lg bg-[rgb(55,82,253)]">Completed</button>
+                        <div class=""><button
+                                class="completed-btn btn btn-primary border-none rounded-lg bg-[rgb(55,82,253)]">Completed</button>
                         </div>
                     </div>
                 </div>
@@ -185,8 +188,8 @@
                             <p class="text-[rgb(0,48,60)]">Deadline</p>
                             <time class="text-[rgb(0,48,60)] font-medium" datetime="2025-03-02">March 2, 2025</time>
                         </div>
-                        <div><button
-                                class="btn btn-primary border-none rounded-lg bg-[rgb(55,82,253)]">Completed</button>
+                        <div class=""><button
+                                class="completed-btn btn btn-primary border-none rounded-lg bg-[rgb(55,82,253)]">Completed</button>
                         </div>
                     </div>
                 </div>
@@ -207,8 +210,8 @@
                             <p class="text-[rgb(0,48,60)]">Deadline</p>
                             <time class="text-[rgb(0,48,60)] font-medium" datetime="2025-03-02">March 2, 2025</time>
                         </div>
-                        <div><button
-                                class="btn btn-primary border-none rounded-lg bg-[rgb(55,82,253)]">Completed</button>
+                        <div class=""><button
+                                class="completed-btn btn btn-primary border-none rounded-lg bg-[rgb(55,82,253)]">Completed</button>
                         </div>
                     </div>
                 </div>
@@ -224,10 +227,12 @@
                 <div class=""> <img src="./assets/activity.png" alt=""></div>
                 <p class="text-[rgb(0,48,60)] text-xl font-medium">Activity Log</p>
             </div>
-            <div class="text-center mb-3">
+            <div id="clear-history-btn" class="text-center mb-3">
                 <button class="btn btn-primary border-none rounded-lg bg-[rgb(55,82,253)]">Clear History</button>
             </div>
             <p class="border-dashed border border-[rgba(55,82,253,0.2)]"></p>
+            <div id="activity" class="">
+            </div>
         </section>
     </main>
     <script src="./script.js"></script>
