@@ -5,10 +5,232 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Board</title>
+    <!-- DaisyUI + Tailwind CDN  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .poppins {
+            font-family: "Poppins", sans-serif;
+
+        }
+    </style>
 </head>
 
-<body>
+<body class="poppins pt-6 pb-6 bg-[rgb(244,247,255)] min-h-screen">
 
+    <!-- navbar start  -->
+
+    <header class="max-w-screen-xl mx-auto">
+        <nav class="flex justify-between p-3 rounded-xl bg-white">
+            <div class="flex items-center  gap-2">
+                <img src="./assets/logo.png" alt="">
+                <h1 class="text-3xl text-[rgb(0,48,60)]">Dev<span class="font-bold">Board</span></h1>
+            </div>
+            <div class="flex items-center justify-center gap-8">
+                <div class="flex items-center gap-4 rounded-[32px] bg-[rgb(244,247,255)] p-4">
+                    <img src="./assets/checkbox.png">
+                    <p class="text-[rgb(30,30,30)] font-bold text-3xl">23</p>
+                </div>
+                <div class="bg-[rgb(244,247,255)] p-4 rounded-full">
+                    <img src="./assets/theme-btn.png" alt="">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- navbar end -->
+
+    <!-- main title  -->
+
+    <main class="max-w-screen-xl mx-auto flex gap-4">
+        <section class="mt-5 p-4 bg-white rounded-2xl">
+            <section class="mb-8">
+                <div class="flex gap-6">
+                    <div class="flex gap-5 p-5 items-center rounded-xl bg-[rgb(244,247,255)]">
+                        <div class="bg-white rounded-full p-4"><img src="./assets/checkbox.png" alt=""></div>
+                        <div>
+                            <p class="text-[rgb(0,48,60)]">Task Assigned</p>
+                            <p class="font-bold text-3xl text-[rgb(0,48,60)]">05</p>
+                        </div>
+                    </div>
+                    <div class="flex rounded-xl pl-10 pt-5 pb-5 pr-12 items-center"
+                        style="background: linear-gradient(130.70deg, rgb(55, 82, 253) 0.419%, rgb(108, 127, 250) 52.66%, rgb(155, 168, 248) 99.733%);">
+                        <img src="./assets/board.png" alt="">
+                        <p class="text-white text-2xl font-medium">Discover Something New Today!</p>
+                    </div>
+                    <div class="flex gap-5 p-5 items-center rounded-xl bg-[rgb(244,247,255)]">
+                        <div class="bg-white rounded-full p-4"><img src="./assets/calender.png" alt=""></div>
+                        <p class=" text-xl font-medium text-[rgb(0,48,60)]">Wed , <br>
+                            <span class="font-bold">Jul 28 2025</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <p class="border-dashed border border-[rgba(55,82,253,0.2)]"></p>
+
+            <!-- grid layout start  -->
+
+            <section class="mt-8 grid grid-cols-3 gap-4">
+                <div class="p-6 rounded-2xl bg-[rgb(244,247,255)]">
+                    <div class="rounded-lg w-24 mb-4 p-3 bg-white">
+                        <h3 class="text-[rgb(0,48,60)] text-center">ShopEase</h3>
+                    </div>
+                    <div class="mb-4">
+                        <h2 class="text-[rgb(0,48,60)] font-medium text-xl">Fix Mobile Button Issue</h2>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg mb-3 ">
+                        <p class="text-gray-500">Debug using Chrome DevTools, check for overlapping elements.</p>
+                    </div>
+                    <p class="border-dashed border border-[rgba(55,82,253,0.2)]"></p>
+                    <div class="flex justify-between mt-3">
+                        <div>
+                            <p class="text-[rgb(0,48,60)]">Deadline</p>
+                            <time class="text-[rgb(0,48,60)] font-medium" datetime="2025-03-02">March 2, 2025</time>
+                        </div>
+                        <div><button
+                                class="btn btn-primary border-none rounded-lg bg-[rgb(55,82,253)]">Completed</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 rounded-2xl bg-[rgb(244,247,255)]">
+                    <div class="rounded-lg w-28 mb-4 p-3 bg-white">
+                        <h3 class="text-[rgb(0,48,60)] text-center">CloudSync</h3>
+                    </div>
+                    <div class="mb-4">
+                        <h2 class="text-[rgb(0,48,60)] font-medium text-xl">Add Dark Mode</h2>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg mb-3">
+                        <p class="text-gray-500">Store the user's preference in localStorage, update CSS.</p>
+                    </div>
+                    <p class="border-dashed border border-[rgba(55,82,253,0.2)]"></p>
+                    <div class="flex justify-between mt-3">
+                        <div>
+                            <p class="text-[rgb(0,48,60)]">Deadline</p>
+                            <time class="text-[rgb(0,48,60)] font-medium" datetime="2025-03-02">March 2, 2025</time>
+                        </div>
+                        <div><button
+                                class="btn btn-primary border-none rounded-lg bg-[rgb(55,82,253)]">Completed</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 rounded-2xl bg-[rgb(244,247,255)]">
+                    <div class="rounded-lg w-1/3 mb-4 p-3 bg-white">
+                        <h3 class="text-[rgb(0,48,60)] text-center">SwiftPay</h3>
+                    </div>
+                    <div class="mb-4">
+                        <h2 class="text-[rgb(0,48,60)] font-medium text-xl">Optimize Home page</h2>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg mb-3">
+                        <p class="text-gray-500">SwiftPay is a payment gateway that accept
+                            payments.</p>
+                    </div>
+                    <p class="border-dashed border border-[rgba(55,82,253,0.2)]"></p>
+                    <div class="flex justify-between mt-3">
+                        <div>
+                            <p class="text-[rgb(0,48,60)]">Deadline</p>
+                            <time class="text-[rgb(0,48,60)] font-medium" datetime="2025-03-02">March 2, 2025</time>
+                        </div>
+                        <div><button
+                                class="btn btn-primary border-none rounded-lg bg-[rgb(55,82,253)]">Completed</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 rounded-2xl bg-[rgb(244,247,255)]">
+                    <div class="rounded-lg w-1/3 mb-4 p-3 bg-white">
+                        <h3 class="text-[rgb(0,48,60)] text-center">Meta</h3>
+                    </div>
+                    <div class="mb-4">
+                        <h2 class="text-[rgb(0,48,60)] font-medium text-xl">Add new emoji 🤲</h2>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg mb-3">
+                        <p class="text-gray-500">Meta Platforms, Inc., as Meta is an American
+                            multinational
+                            technology conglomerate based in Menlo
+                            Park, California.</p>
+                    </div>
+                    <p class="border-dashed border border-[rgba(55,82,253,0.2)]"></p>
+                    <div class="flex justify-between mt-3">
+                        <div>
+                            <p class="text-[rgb(0,48,60)]">Deadline</p>
+                            <time class="text-[rgb(0,48,60)] font-medium" datetime="2025-03-02">March 2, 2025</time>
+                        </div>
+                        <div><button
+                                class="btn btn-primary border-none rounded-lg bg-[rgb(55,82,253)]">Completed</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 rounded-2xl bg-[rgb(244,247,255)]">
+                    <div class="rounded-lg w-32 mb-4 p-3 bg-white">
+                        <h3 class="text-[rgb(0,48,60)] text-center">Google LLC</h3>
+                    </div>
+                    <div class="mb-4">
+                        <h2 class="text-[rgb(0,48,60)] font-medium text-xl">Integrate OpenAI API </h2>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg mb-3">
+                        <p class="text-gray-500">Google LLC is an American multinational corporation and technology
+                            company
+                            focusing on Artificial Intelligence .</p>
+                    </div>
+                    <p class="border-dashed border border-[rgba(55,82,253,0.2)]"></p>
+                    <div class="flex justify-between mt-3">
+                        <div>
+                            <p class="text-[rgb(0,48,60)]">Deadline</p>
+                            <time class="text-[rgb(0,48,60)] font-medium" datetime="2025-03-02">March 2, 2025</time>
+                        </div>
+                        <div><button
+                                class="btn btn-primary border-none rounded-lg bg-[rgb(55,82,253)]">Completed</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 rounded-2xl bg-[rgb(244,247,255)]">
+                    <div class="rounded-lg w-28 mb-4 p-3 bg-white">
+                        <h3 class="text-[rgb(0,48,60)] text-center">Glassdoor</h3>
+                    </div>
+                    <div class="mb-4">
+                        <h2 class="text-[rgb(0,48,60)] font-medium text-xl">Improve Job searching </h2>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg mb-3">
+                        <p class="text-gray-500">We're serving up insights and anonymous
+                            conversation, so you'll have the goods you need to succeed.</p>
+                    </div>
+                    <p class="border-dashed border border-[rgba(55,82,253,0.2)]"></p>
+                    <div class="flex justify-between mt-3">
+                        <div>
+                            <p class="text-[rgb(0,48,60)]">Deadline</p>
+                            <time class="text-[rgb(0,48,60)] font-medium" datetime="2025-03-02">March 2, 2025</time>
+                        </div>
+                        <div><button
+                                class="btn btn-primary border-none rounded-lg bg-[rgb(55,82,253)]">Completed</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- grid layout end  -->
+
+        <!-- Activity layout  -->
+
+        <section class="bg-white mt-5 w-5/6 rounded-2xl">
+            <div class="flex items-center justify-center gap-3 mt-6 mb-4">
+                <div class=""> <img src="./assets/activity.png" alt=""></div>
+                <p class="text-[rgb(0,48,60)] text-xl font-medium">Activity Log</p>
+            </div>
+            <div class="text-center mb-3">
+                <button class="btn btn-primary border-none rounded-lg bg-[rgb(55,82,253)]">Clear History</button>
+            </div>
+            <p class="border-dashed border border-[rgba(55,82,253,0.2)]"></p>
+        </section>
+    </main>
+    <script src="./script.js"></script>
 </body>
 
 </html>
