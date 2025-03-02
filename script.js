@@ -31,15 +31,6 @@ const TaskNum = document.getElementById("task-number");
 const navNum = document.getElementById("nav-number");
 const activity = document.getElementById("activity");
 
-let tasks = [
-  "Fix Mobile Button Issue",
-  "Add Dark Mode",
-  "Optimize Home page",
-  "Add new emoji 🤲",
-  "Integrate OpenAI API",
-  "Improve Job searching",
-];
-
 let clickBtns = 0;
 const totalClickBtns = CompletedBtns.length;
 
