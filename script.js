@@ -1,21 +1,10 @@
 const discover = document.getElementById("discover");
-if (discover) {
-  discover.addEventListener("click", function (e) {
-    e.preventDefault();
-    window.location.href = "./blog.html";
-  });
-}
-
-const btnBack = document.getElementById("back-btn");
-if (btnBack) {
-  btnBack.addEventListener("click", function (e) {
-    e.preventDefault();
-    window.history.back();
-  });
-}
+discover.addEventListener("click", function (e) {
+  e.preventDefault();
+  window.location.href = "blog.html";
+});
 
 const currentDate = new Date();
-
 const formattedDate = currentDate.toLocaleDateString("en-US", {
   weekday: "long",
   year: "numeric",
@@ -24,12 +13,6 @@ const formattedDate = currentDate.toLocaleDateString("en-US", {
 });
 
 document.getElementById("date").innerText = formattedDate;
-
-const formattedTime = currentDate.toLocaleTimeString("en-US", {
-  hour: "2-digit",
-  minute: "2-digit",
-  second: "2-digit",
-});
 
 function getRandomColor() {
   const r = Math.floor(Math.random() * 256);
@@ -48,6 +31,15 @@ const TaskNum = document.getElementById("task-number");
 const navNum = document.getElementById("nav-number");
 const activity = document.getElementById("activity");
 
+let tasks = [
+  "Fix Mobile Button Issue",
+  "Add Dark Mode",
+  "Optimize Home page",
+  "Add new emoji 🤲",
+  "Integrate OpenAI API",
+  "Improve Job searching",
+];
+
 let clickBtns = 0;
 const totalClickBtns = CompletedBtns.length;
 
@@ -55,6 +47,14 @@ for (const button of CompletedBtns) {
   button.addEventListener("click", function (e) {
     e.preventDefault();
     alert("Board Completed Successfully!");
+
+    const currentDate = new Date();
+
+    const formattedTime = currentDate.toLocaleTimeString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    });
 
     let newTaskName = parseInt(TaskNum.innerText) - 1;
     TaskNum.innerText = newTaskName;
@@ -65,7 +65,10 @@ for (const button of CompletedBtns) {
     button.setAttribute("disabled", true);
 
     const div = document.createElement("div");
-    div.innerHTML = `<p class="mt-3 rounded-xl m-4 p-2 bg-[rgb(244,247,255)]"> You have Complete The Task Add Dark Mode at ${formattedTime}</p>`;
+    div.innerHTML = `<p class="mt-3 rounded-xl m-4 p-2 bg-[rgb(244,247,255)]"> You have Complete The Task ${
+      e.target.parentNode.parentNode.parentNode.querySelector(".title")
+        .innerText
+    } at ${formattedTime}</p>`;
 
     activity.appendChild(div);
 
